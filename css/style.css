@@ -1,0 +1,428 @@
+body {
+	min-width: auto;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 24px;
+	font-family: "Arial", sans-serif;
+	color: #404040;
+	background-color: white;
+}
+
+/*HEADER-TOP*/
+
+.header-top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #FFE8B6;
+  height: 60px;
+  width: 100%;
+}
+
+.header-logo-txt p {
+	font-family: 'Barrio', cursive;
+	font-size: 45px;
+	color: #4B5562;
+	letter-spacing: 2px;
+	font-weight: 400;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.main-nav li {
+	text-transform: uppercase;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.main-nav li:last-child {
+	margin-right: 3px;
+}
+
+.main-nav li:first-child {
+	margin-left: 3px;
+}
+
+.main-nav a {
+	color: #4B5562;
+	text-decoration: none;
+}
+
+.main-nav a:hover {
+	border-top: 2px solid #4B5562;
+	border-radius: 2px;
+}
+
+.main-nav a:active {
+	color: #57A191;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  width: 115px;
+  justify-content: space-around;
+	padding: 10px;
+	font: inherit;
+	vertical-align: top;
+	text-align: center;
+	color: #a38b70;
+	text-transform: uppercase;
+	text-decoration: none;
+	word-wrap: break-word;
+	border: 2px solid #a38b70;
+	border-radius: 2px;
+}
+
+.btn:hover {
+	color: #8d745a;
+	border-color: #8d745a;
+	
+}
+
+.btn:active {
+	color: rgba(141, 116, 90, 0.3);
+	border-color: #8d745a;
+}
+
+.btn-quick-order {
+	color: #4B5562;
+  border-color: #4B5562;
+  margin-right: 5px;
+}
+
+.btn-quick-order:hover {
+	color: #FFE8B6;
+	background-color: #4B5562;
+	border-color: #000;
+	border-radius: 5px;
+}
+
+.btn-quick-order:active {
+	color: #FFD2DE;
+	background-color: #4B5562;
+	border-color: #464646;
+	border-radius: 0px;
+}
+
+/*HEADER-SLIDER*/
+
+.header-slider {
+  display: flex;
+  position: relative;
+  min-width: 0;
+  padding: 30px;
+  background-image: url("../img/back-var-mini.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.header-slide {
+  position: relative;
+  text-align: center;
+}
+
+.header-slide img {
+  border: 2px solid #4B5562;
+  border-radius: 5px;
+}
+
+
+/*NOVELTIES*/
+
+
+.top-novelties {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-width: 0;
+  height: 100%;
+  padding: 5px;
+  background-color: #4B5562;
+}
+
+.novelties-heading {
+	color: #FFD2DE;
+	font-family: 'Barrio', cursive;
+	font-size: 32px;
+  text-align: center;
+  align-self: flex-start;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.novelty-items {
+  display: flex;
+  position: relative;
+  min-width: 0;
+}
+
+.novelty-item {
+  position: relative;
+  text-align: center;
+}
+
+.novelty-item img {
+  border: 2px solid #FFE8B6;
+  border-radius: 5px;
+}
+
+.novelty-item p {
+  width: auto;
+  font-size: 12px;
+  color: #FFD2DE; 
+  text-transform: uppercase;
+  background-color: #363636;
+}
+
+.novelty-item a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+  display: flex;
+}
+
+/* header-slider SLICK */
+.header-slider .slick-arrow {
+  display: none;
+}
+
+.header-slider .slick-arrow .slick-prev {
+  border: none;
+}
+
+.header-slider .slick-arrow:active {
+  border: none;
+}
+
+.header-slider .slick-arrow:link {
+  border: none;
+}
+
+/* novelty-items SLICK */
+.novelty-items .slick-arrow {
+  position: absolute;
+  align-self: center;
+  font-size: 0;
+  z-index: 10;
+  width: 64px;
+  height: 64px;
+  border: none;
+}
+
+.novelty-items .slick-arrow:hover {
+  border: none;
+}
+
+.novelty-items .slick-arrow:active {
+  border: none;
+}
+
+.novelty-items .slick-arrow:link {
+  border: none;
+}
+
+.novelty-items .slick-arrow.slick-prev  {
+  left: 0;
+  background: url('../img/prev.png') 0 0 / 100% no-repeat;
+}
+
+.novelty-items .slick-arrow.slick-next  {
+  right: 0;
+  background: url('../img/next.png') 0 0 / 100% no-repeat;
+}
+
+
+/* BRANDS*/
+
+
+.brands {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5px;
+  background-color: #FFD2DE;
+}
+
+.brands-heading {
+  color: #4B5562;
+  font-family: 'Barrio', cursive;
+	font-size: 32px;
+  text-align: center;
+  align-self: flex-start;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.brand-sketchers {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: no-wrap;
+  width: 40%;
+  padding: 10px;
+  background-color: #4B5562;
+  margin-bottom: 10px;
+}
+
+.brand-sketchers img {
+  width: 55%;
+  margin-right: 15px;
+}
+
+.brand-sketchers p {
+  color: #FFD2DE;
+  width: 40%;
+  padding-right: 10px;
+  font-size: 1.5vw;
+  line-height: 2vw;
+  word-wrap: break-word;
+}
+
+.brand-NB {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: no-wrap;
+  width: 54%;
+  padding: 10px;
+  background-color: #4B5562;
+  margin-bottom: 10px;
+}
+
+.brand-NB img {
+  width: 90%;
+  align-self: center;
+}
+
+.brand-NB p {
+  color: #FFD2DE;
+  padding-right: 10px;
+  font-size: 1.5vw;
+  line-height: 2vw;
+  word-wrap: break-word;
+}
+
+.brand-nike {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: no-wrap;
+  width: 54%;
+  padding: 10px;
+  background-color: #4B5562;
+  margin-bottom: 10px;
+}
+
+.brand-nike img {
+  width: 90%;
+  align-self: center;
+}
+
+.brand-nike p {
+  color: #FFD2DE;
+  padding-right: 10px;
+  font-size: 1.5vw;
+  line-height: 2vw;
+  word-wrap: break-word;
+}
+
+.brand-puma {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: no-wrap;
+  width: 40%;
+  padding: 10px;
+  background-color: #4B5562;
+  margin-bottom: 10px;
+}
+
+.brand-puma img {
+  width: 55%;
+  margin-right: 15px;
+}
+
+.brand-puma p {
+  color: #FFD2DE;
+  padding-right: 10px;
+  font-size: 1.5vw;
+  line-height: 2vw;
+  word-wrap: break-word;
+}
+
+.brand-golf {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: no-wrap;
+  width: 40%;
+  padding: 10px;
+  background-color: #4B5562;
+  margin-bottom: 10px;
+}
+
+.brand-golf img {
+  width: 55%;
+  margin-right: 15px;
+}
+
+.brand-golf p {
+  color: #FFD2DE;
+  padding-right: 10px;
+  font-size: 1.5vw;
+  line-height: 2vw;
+  word-wrap: break-word;
+}
+
+.brand-vans {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: no-wrap;
+  width: 54%;
+  padding: 10px;
+  background-color: #4B5562;
+  margin-bottom: 10px;
+}
+
+.brand-vans img {
+  width: 90%;
+  align-self: center;
+}
+
+.brand-vans p {
+  color: #FFD2DE;
+  padding-right: 10px;
+  font-size: 1.5vw;
+  line-height: 2vw;
+  word-wrap: break-word;
+}
