@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ru">
+<html lang="eng">
   <head>
     <meta charset="utf-8">
     <title>shoeGaze</title>
@@ -7,41 +7,45 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>  
+
+      <!--HEADER-->
+
       <div class="header-top">
         <div class="header-logo-txt">
           <p>shoeGaze</p>
         </div>
         <ul class="main-nav">
-          <li><a href="#novelties-ancore">novelties</a></li>
-          <li><a href="#brands-ancore">brands</a></li>
-          <li><a href="#">models</a></li>
-			    <li><a href="#">how to buy?</a></li>
+          <li><a href="#novelties-anchor">novelties</a></li>
+          <li><a href="#brands-anchor">brands</a></li>
+          <li><a href="#models-anchor">models</a></li>
+			    <li><a href="#purchase-form-anchor">purchase form</a></li>
 			    <li><a href="#">about us</a></li>
 			    <li><a href="#">contacts</a></li>
         </ul>
-        <a class="btn btn-quick-order" href="#">quick buy</a>
+        <a class="btn" href="#">quick buy</a>
       </div>  
 		  
     <div class="header-slider">
       <div class="header-slide">
-        <img src="img/slide-1.jpg" alt="vans-sneakers" alt="">
+        <img src="img/slide-1.jpg" alt="vans-sneakers">
       </div>
       <div class="header-slide">
-        <img src="img/slide-2.jpg" alt="puma-sneakers" alt="">
+        <img src="img/slide-2.jpg" alt="puma-sneakers">
       </div>
       <div class="header-slide">
-        <img src="img/slide-3.jpg" alt="turquoise-sneakers" alt="">
+        <img src="img/slide-3.jpg" alt="turquoise-sneakers">
       </div>
       <div class="header-slide">
-        <img src="img/slide-4.jpg" alt="golf-sneakers" alt="">
+        <img src="img/slide-4.jpg" alt="golf-sneakers">
       </div>
       <div class="header-slide">
-        <img src="img/slide-5.jpg" alt="NB-sneakers" alt="">
+        <img src="img/slide-5.jpg" alt="NB-sneakers">
       </div>
     </div> 
 
+    <!--NOVELTIES-->
 
-    <div class="top-novelties" id="novelties-ancore">
+    <div class="top-novelties" id="novelties-anchor">
      <h2 class="novelties-heading">top novelties</h2>
       <div class="novelty-items">
        <div class="novelty-item">
@@ -83,8 +87,9 @@
       </div> 
     </div>
 
+    <!--BRANDS-->
 
-    <div class="brands" id="brands-ancore">
+    <div class="brands" id="brands-anchor">
       <h2 class="brands-heading">brands</h2>
         <div class="brand-sketchers brand-item">
           <img src="img/brand 01 sketchers.jpg" alt="sketchers">
@@ -139,6 +144,114 @@
             Since 1996, the company has been the primary sponsor
             of the annual Vans Warped Tour traveling rock festival.</p>
         </div>
+    </div>
+
+    <!--MODELS-->
+
+    <div class="models" id="models-anchor">
+      <h2 class="models-heading">models</h2>
+      <div class="model">
+         <img src="img/model 01 golf la fleur in colors.jpg" alt="golf la fleur in colors">
+         <p><b>golf</b><br> la fleur</p>
+      </div>
+      <div class="model">
+       <img src="img/model 02 golf wang feat vans collection.jpg" alt="golf wang feat vans">
+       <p><b>golf</b><br> wang feat vans</p>
+      </div>
+      <div class="model">
+       <img src="img/model 03 nike air monarch IV x martine rose.jpg" alt="nike air monarch IV x martine rose">
+       <p><b>nike air</b><br> monarch IV x martine rose</p>
+      </div>
+      <div class="model">
+       <img src="img/model 04 air max plus tn black multicolor.jpg" alt="nike air max plus tn black multicolor">
+       <p><b>nike air</b><br> max plus tn black multicolor</p>
+      </div>
+      <div class="model">
+       <img src="img/model 05 new balance 500 series.jpg" alt="new balance 500 series">
+       <p><b>new balance</b><br> 500 series</p>
+      </div>
+      <div class="model">
+       <img src="img/model 06 skeatchers LE premium d'lites.jpg" alt="skeatchers LE premium">
+       <p><b>skeatchers</b><br> LE premium</p>
+      </div>
+      <div class="model">
+       <img src="img/model 07 sketchers x one peace.jpg" alt="sketchers x one peace">
+       <p><b>sketchers</b><br> x one peace</p>
+      </div>
+      <div class="model">
+       <img src="img/model 08 puma RS-X3 puzzle.jpg" alt="puma RS-X3 puzzle">
+       <p><b>puma</b><br> RS-X3 puzzle</p>
+      </div>
+      <div class="model">
+       <img src="img/model 09 puma future rider ride one.jpg" alt="puma future rider ride one">
+       <p><b>puma</b><br> future rider ride one</p>
+      </div>
+      <div class="model">
+       <img src="img/model 10 new balance 600 series.jpg" alt="new balance 600 series">
+       <p><b>new balance</b><br> 600 series</p>
+      </div>
+      <div class="model">
+       <img src="img/model 11 vans comfycush.jpg" alt="vans comfycush">
+       <p><b>vans</b><br> comfycush</p>
+      </div>
+      <div class="model">
+       <img src="img/model 12 rainbow for pride.png" alt="vans rainbow for pride">
+       <p><b>vans</b><br> rainbow for pride</p>
+      </div>
+    </div> 
+
+    <!--PURCHASE-->
+
+    <div class="purchase-form" id="purchase-form-anchor">
+      <h2 class="purchase-form-heading">purchase form</h2>
+      <form class="buying-form" method="POST">
+       <div class="form-field">
+        <label for="ur-purchase-field">item in basket:</label>
+         <input type="text" name="ur-purchase" id="ur-purchase-field" value="" required>
+       </div>
+       <div class="form-field">
+        <label for="purchase-amount-field">amount:</label>
+         <input type="text" name="purchase-amount" id="purchase-amount-field" value="" required>
+       </div>
+       <div class="form-field">
+        <label for="first-name-field">first-name:</label>
+         <input type="text" name="first-name" id="first-name-field" value="" required>
+       </div>
+       <div class="form-field">
+        <label for="second-name-field">second-name:</label>
+         <input type="text" name="second-name" id="second-name-field" value="" required>
+       </div>
+       <div class="form-field">
+        <label for="tel">telephone-number:</label>
+         <input type="tel" name="telephone number" id="telephone-number-field" 
+          placeholder="+123-45-678-91-23" 
+          pattern="+[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" 
+          required>
+       </div>
+       <div class="form-field">
+        <label for="email">email:</label>
+         <input type="email">
+       </div>
+       <div class="form-field">
+        <label for="delivery-field">deliver by:</label>
+         <select name="delivery" id="delivery-field">
+          <option value="FedEx">FedEx</option>
+          <option value="UPS">UPS</option>
+          <option value="Purolator">Purolator</option>
+         </select>
+       </div>
+       <div class="form-field">
+         <label for="payment-field">pay with:</label>
+         <select name="payment" id="payment-field">
+          <option value="Google Pay">Google Pay</option>
+          <option value="Apple Pay">Apple Pay</option>
+          <option value="Amazon Pay">Amazon Pay</option>
+         </select>
+       </div>
+        <input class="btn" type="submit" name="" value="buy">
+        <label for="subscribe">receive information about collection updates</label>
+         <input type="checkbox" value="subscribe" id="subscribe" checked>
+      </div>
     </div>
 
   <!--JQWERY connecting--> 
