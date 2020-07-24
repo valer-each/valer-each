@@ -1,7 +1,8 @@
 body {
-	width: auto;
-	margin: 0;
-	padding: 0;
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
 	font-size: 16px;
 	line-height: 24px;
 	font-family: "Arial", sans-serif;
@@ -9,7 +10,15 @@ body {
 	background-color: white;
 }
 
-/*HEADER-TOP*/
+/*HEADER*/
+
+.header {
+  display: block;
+  background-image: url("../img/back-var-mini.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
 
 .header-top {
 	display: flex;
@@ -19,6 +28,7 @@ body {
 	background-color: #FDDD96;
   height: 60px;
   width: 100%;
+  padding: 8px 0px;
 }
 
 .header-logo-txt p {
@@ -29,6 +39,7 @@ body {
 	font-weight: 400;
   line-height: 0;
   margin-left: 5px;
+  width: 15%;
 }
 
 .main-nav {
@@ -37,6 +48,7 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  text-align: center;
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -45,7 +57,7 @@ body {
 .main-nav li {
 	text-transform: uppercase;
 	vertical-align: middle;
-	margin-right: 20px;
+  margin-right: 20px;
 }
 
 .main-nav li:last-child {
@@ -58,16 +70,21 @@ body {
 
 .main-nav a {
 	color: #4B5562;
-	text-decoration: none;
+  text-decoration: none;
+  filter: drop-shadow(0px 0px 1px #4B5562);
+  transition-duration: 0.1s;
 }
 
 .main-nav a:hover {
-	border-top: 2px solid #4B5562;
-	border-radius: 2px;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 .main-nav a:active {
-	color: #57A191;
+  filter: drop-shadow(0px 0px 0px #4B5562);
+  color: #4B5562;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .btn {
@@ -83,47 +100,121 @@ body {
 	text-transform: uppercase;
 	text-decoration: none;
 	word-wrap: break-word;
-	border: 2px solid #4B5562;
+	outline: 2px solid #4B5562;
   border-radius: 2px;
+}
+
+.btn-quick-buy {
+  width: 15%;
   margin-right: 5px;
 }
 
 .btn:hover {
   color: #FFE8B6;
+  font-weight: 700;
 	background-color: #4B5562;
-	border-color: #000;
-	border-radius: 5px;
+	outline: none;
+  border-radius: 5px;
+  filter: drop-shadow(0px 0px 1px #4B5562);
 }
 
 .btn:active {
-	color: #FFD2DE;
-	background-color: #4B5562;
-	border-color: #464646;
-	border-radius: 0px;;
+	color: #FFE8B6;
+  border-radius: 10px;
+  background-color: #5f6c7e;
+  filter: drop-shadow(0px 0px 4px #6e7f94);
 }
 
 /*HEADER-SLIDER*/
 
-.header-slider {
-  display: flex;
-  position: relative;
-  min-width: 0;
-  padding: 30px;
-  background-image: url("../img/back-var-mini.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+
+.header-slider-wrapper {
+  max-width: 724px;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-.header-slide {
-  position: relative;
-  text-align: center;
-  outline: none;
+.header-slides-container {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
 }
 
-.header-slide img {
-  border: 2px solid #4B5562;
-  border-radius: 5px;
+.slider-radio {
+  display: none;
+  width: 500%;
+  height: 100%;
+}
+
+.promo-slides {
+  width: 500%;
+  height: 100%;
+}
+
+.tech-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.promo-slide {
+    display: inline-block;
+    width: 20%;
+}
+
+.tech-li {
+  margin: 0;
+  padding: 0;
+}
+
+.promo-item {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0 0 0;
+  overflow: hidden;
+}
+
+.promo-item-figcaption p {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 10px;
+  background-color: #FFD2DE;
+  color: #4B5562;
+  font-size: inherit;
+}
+
+.header-slider-controls {
+  margin: 20px auto 5px auto;
+  width: 210px;
+  line-height: 18px;
+}
+
+.slider-controls-botton {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #FFD2DE;
+  opacity: 0.9;
+  cursor: pointer;
+  transition-duration: 0.3;
+}
+
+.slider-controls-botton:hover {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+#header-slide-1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#header-slide-2:checked ~ .s2 {
+  margin-left: -20%;
 }
 
 
@@ -193,6 +284,12 @@ body {
 }
 
 /* header-slider SLICK */
+
+.header-slide .slick-slide {
+  display: flex;
+  flex-direction: row;
+}
+
 .header-slider .slick-arrow {
   display: none;
 }
@@ -694,4 +791,46 @@ body {
 .share img {
   width: 100%;
   position: center;
+}
+
+/*MEDIA QWERY*/
+
+@media screen and (max-width: 1155px) {
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  .main-nav li {
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-right: 20px;
+    width: 30%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 895px) {
+  .main-nav li:nth-child(1) {
+    display: none;
+  }
+
+  .main-nav li:nth-child(2) {
+    display: none;
+  }
+
+  .main-nav li:nth-child(6) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 624px) {
+  .main-nav {
+    display: none;
+  }
 }

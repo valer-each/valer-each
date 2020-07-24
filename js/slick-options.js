@@ -6,19 +6,19 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         responsive:[
             {
-                breakpoint: 1080,
+                breakpoint: 1242,
                 settings: {
                     slidesToShow: 3,
                 }       
             },{
-                breakpoint: 720,
+                breakpoint: 934,
                 settings: {
                     slidesToShow: 2,
                 }       
             }
         ]
     });
-    $('.header-slider').slick({
+    $('.').slick({
         arrows: false,
         slidesToShow: 1,
         speed: 700,
