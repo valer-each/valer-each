@@ -13,7 +13,9 @@ body {
 /*HEADER*/
 
 .header {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: url("../img/back-var-mini.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
@@ -38,7 +40,7 @@ body {
 	letter-spacing: 2px;
 	font-weight: 400;
   line-height: 0;
-  margin-left: 5px;
+  margin-left: 10px;
   width: 15%;
 }
 
@@ -91,7 +93,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 115px;
-  justify-content: space-around;
+  justify-content: space-evenly;
 	padding: 10px;
 	font: inherit;
 	vertical-align: top;
@@ -99,21 +101,22 @@ body {
 	color: #4B5562;
 	text-transform: uppercase;
 	text-decoration: none;
-  word-wrap: none;
 	outline: 2px solid #4B5562;
   border-radius: 2px;
 }
 
 .btn-quick-buy {
-  width: 15%;
-  margin-right: 5px;
+  justify-content: center;
+  width: 13.5%;
+  margin-right: 10px;
   flex-wrap: nowrap;
+  word-wrap: none;
 }
 
 .btn:hover {
   color: #FFE8B6;
   font-weight: 700;
-	background-color: #4B5562;
+	background-color: #202a38;
 	outline: none;
   border-radius: 5px;
   filter: drop-shadow(0px 0px 1px #4B5562);
@@ -340,8 +343,8 @@ body {
   position: absolute;
   font-size: 0;
   z-index: 10;
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   border: none;
   outline: none;
   opacity: 0.7;
@@ -363,13 +366,15 @@ body {
 }
 
 .novelty-items .slick-arrow.slick-prev  {
-  left: 0;
-  background: url('../img/prev.png') 0 0 / 100% no-repeat;
+  left: 30px;
+  background: url('../img/prev-alt.png') 0 0 / 100% no-repeat;
+  cursor: pointer;
 }
 
 .novelty-items .slick-arrow.slick-next  {
-  right: 0;
-  background: url('../img/next.png') 0 0 / 100% no-repeat;
+  right: 30px;
+  background: url('../img/next-alt.png') 0 0 / 100% no-repeat;
+  cursor: pointer;
 }
 
 
@@ -395,6 +400,15 @@ body {
 	text-transform: uppercase;
 }
 
+.brand-item p {
+  line-height: 35px;
+  color: #FFD2DE;
+  padding-right: 10px;
+  font-size: 2vw;
+  line-height: 2.5vw;
+  word-wrap: break-word;
+}
+
 .brand-sketchers {
   display: flex;
   flex-direction: row;
@@ -410,15 +424,6 @@ body {
 .brand-sketchers img {
   width: 55%;
   margin-right: 15px;
-}
-
-.brand-sketchers p {
-  color: #FFD2DE;
-  width: 40%;
-  padding-right: 10px;
-  font-size: 1.5vw;
-  line-height: 2vw;
-  word-wrap: break-word;
 }
 
 .brand-NB {
@@ -438,14 +443,6 @@ body {
   align-self: center;
 }
 
-.brand-NB p {
-  color: #FFD2DE;
-  padding-right: 10px;
-  font-size: 1.5vw;
-  line-height: 2vw;
-  word-wrap: break-word;
-}
-
 .brand-nike {
   display: flex;
   flex-direction: column;
@@ -461,14 +458,6 @@ body {
 .brand-nike img {
   width: 90%;
   align-self: center;
-}
-
-.brand-nike p {
-  color: #FFD2DE;
-  padding-right: 10px;
-  font-size: 1.5vw;
-  line-height: 2vw;
-  word-wrap: break-word;
 }
 
 .brand-puma {
@@ -488,14 +477,6 @@ body {
   margin-right: 15px;
 }
 
-.brand-puma p {
-  color: #FFD2DE;
-  padding-right: 10px;
-  font-size: 1.5vw;
-  line-height: 2vw;
-  word-wrap: break-word;
-}
-
 .brand-golf {
   display: flex;
   flex-direction: row;
@@ -513,14 +494,6 @@ body {
   margin-right: 15px;
 }
 
-.brand-golf p {
-  color: #FFD2DE;
-  padding-right: 10px;
-  font-size: 1.5vw;
-  line-height: 2vw;
-  word-wrap: break-word;
-}
-
 .brand-vans {
   display: flex;
   flex-direction: column;
@@ -536,14 +509,6 @@ body {
 .brand-vans img {
   width: 90%;
   align-self: center;
-}
-
-.brand-vans p {
-  color: #FFD2DE;
-  padding-right: 10px;
-  font-size: 1.5vw;
-  line-height: 2vw;
-  word-wrap: break-word;
 }
 
 /* MODELS */
@@ -580,24 +545,48 @@ body {
   margin: 15px;
 }
 
-.model-img {
+.model img {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   background-image: url("img/model 01 golf la fleur olive.jpg");
+  cursor: pointer;
 }
 
-.model p {
+
+.model-name {
   color: #4B5562;
-  font-size: 1.5vw;
-  line-height: 2vw;
-  word-wrap: break-word;
+  font-size: 2vw;
+  line-height: 2.2vw;
   text-align: center;
   text-transform: uppercase;
-  flex-wrap: wrap;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.model-card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 8px;
+  padding: 0;
+}
+
+.model-price {
+  color: #4B5562;
+  font-size: 2vw;
+  width: 30%;
+  left: 5px;
+}
+
+.buy-model {
+  width: 30%;
+  margin-left: 0;
+  background-color: #4B5562;
+  color: #FFD2DE;
+  outline: none;
 }
 
 /*PURCHASE FORM*/
@@ -822,7 +811,7 @@ body {
   position: center;
 }
 
-/*MEDIA QWERY*/
+/*MEDIA QUERY*/
 
 @media screen and (max-width: 1155px) {
   .main-nav {
@@ -864,10 +853,83 @@ body {
   .promo-item-text {
     display: none;
   }
+
+  .cut-button-word {
+    display: none;
+  }
+  
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+  }
+
+  .main-nav li {
+	  margin: 0 10px;
+  }
+
+  .brand-item {
+    width: 100%;
+  }
+
+  .brand-item p {
+    width: 100%;
+    color: #FFD2DE;
+    padding-right: 10px;
+    font-size: 3vw;
+    line-height: 4vw;
+    word-wrap: break-word;
+  }
 }
 
-@media screen and (max-width: 624px) {
+@media screen and (max-width: 830px) {
+  .model {
+    width: 100%
+  }
+
+  .model p {
+    font-size: 4vw;
+    line-height: 5.5vw;
+  }
+}
+
+@media screen and (max-width: 674px) {
   .main-nav {
     display: none;
+  }
+
+  .header-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDDD96;
+    height: 80px;
+    width: 100%;
+  }
+
+  .header-logo-txt p {
+    margin: 23px;
+  }
+
+  .btn-quick-buy {
+    color: #FFE8B6;
+    font-weight: 700;
+	  background-color: #4B5562;
+	  outline: none;
+    border-radius: 5px;
+    filter: drop-shadow(0px 0px 1px #4B5562);
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .brand-item p {
+    font-size: 5.5vw;
+    line-height: 6.5vw;
   }
 }
