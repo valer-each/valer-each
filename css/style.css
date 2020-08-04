@@ -400,6 +400,11 @@ body {
 	text-transform: uppercase;
 }
 
+.brand-item {
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 13px 0 rgb(50, 64, 87);
+}
+
 .brand-item p {
   line-height: 35px;
   color: #FFD2DE;
@@ -418,7 +423,6 @@ body {
   width: 40%;
   padding: 10px;
   background-color: #4B5562;
-  margin-bottom: 10px;
 }
 
 .brand-sketchers img {
@@ -435,7 +439,6 @@ body {
   width: 54%;
   padding: 10px;
   background-color: #4B5562;
-  margin-bottom: 10px;
 }
 
 .brand-NB img {
@@ -452,7 +455,6 @@ body {
   width: 54%;
   padding: 10px;
   background-color: #4B5562;
-  margin-bottom: 10px;
 }
 
 .brand-nike img {
@@ -469,7 +471,6 @@ body {
   width: 40%;
   padding: 10px;
   background-color: #4B5562;
-  margin-bottom: 10px;
 }
 
 .brand-puma img {
@@ -486,7 +487,6 @@ body {
   width: 40%;
   padding: 10px;
   background-color: #4B5562;
-  margin-bottom: 10px;
 }
 
 .brand-golf img {
@@ -503,7 +503,6 @@ body {
   width: 54%;
   padding: 10px;
   background-color: #4B5562;
-  margin-bottom: 10px;
 }
 
 .brand-vans img {
@@ -519,7 +518,7 @@ body {
   justify-content: space-around;
   align-content: space-around;
   flex-wrap: wrap;
-  padding: 5px;
+  padding: 5px 5px 20px 5px;
   background-color: #4B5562;
 }
 
@@ -543,6 +542,25 @@ body {
   background-color: #FFD2DE;
   padding: 15px;
   margin: 15px;
+  position: relative;
+}
+
+.model::before, .model::after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 7px;
+  left: 10px;
+  width: 47%;
+  top: 80%;
+  box-shadow: 0 15px 10px 0 rgb(32, 40, 53);
+  transform: rotate(-3deg);
+}
+
+.model::after {
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
 }
 
 .model img {
@@ -583,10 +601,11 @@ body {
 
 .buy-model {
   width: 30%;
-  margin-left: 0;
   background-color: #4B5562;
   color: #FFD2DE;
   outline: none;
+  font-size: 2vw;
+  line-height: 2.2vw;
 }
 
 /*PURCHASE FORM*/
@@ -885,11 +904,17 @@ body {
     line-height: 4vw;
     word-wrap: break-word;
   }
+
+  .brand-item {
+    margin: 20px;
+    box-shadow: 10px 10px 13px 0 rgb(50, 64, 87);
+  }
 }
 
 @media screen and (max-width: 830px) {
   .model {
-    width: 100%
+    margin: 5px;
+    width: 40%
   }
 
   .model p {
@@ -924,6 +949,17 @@ body {
 	  outline: none;
     border-radius: 5px;
     filter: drop-shadow(0px 0px 1px #4B5562);
+  }
+
+  .model {
+    margin: 20px;
+    width: 100%
+  }
+
+  .buy-model {
+    padding: 15px;
+    width: 75px;
+    font-size: 3vw;
   }
 }
 
